@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;   
+}
+body {
+    font-family:'Red Hat Display', sans-serif;
+}
+.image{
+    height: 70vh;
+    width: 32vw;
+    border-radius: 15px;   
+} 
+.container {
+    display: flex;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.con {
+    margin-top: 0px;
+}
+.info {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+h1 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h4 {
+    color: orange;
+    margin-bottom: 15px;
+}
+.sub-text{
+    line-height: 30px;
+    font-size: 20px;
+    color: rgb(117, 113, 107);
+    margin-bottom: 0;
+}
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+span {
+    font-weight: bolder;
+    font-size: 18px;
+    background-color: rgb(245, 224, 199);
+    color: rgb(243, 141, 16);
+    padding:2px 5px;
+    position: absolute;
+    top: 8px;
+    left: 125px;
+    border-radius: 2px;
+}
+.slashed-price {
+    font-size: 18px;
+    color: rgb(180, 180, 175);
+    text-decoration: line-through;
+    margin-top: 5px;
+}
+.order {
+    display: flex;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 30px ;
+    cursor: pointer;
+}
+.count {
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(206, 200, 194);
+}
+.minus, .zero, .plus {
+    padding: 15px 17px;
+    font-size: 20px;
+    font-weight: 900 ;
+}
+.plus, .minus {
+    color: rgb(236, 123, 17) ;
+}
+
+.ca--rt {
+    margin-left: 15px;
+    background-color: rgb(236, 123, 17) ;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.ca---rt {
+    align-self: center;
+    margin-right: 10px;
+}
+@media screen and (max-width: 960px) {
+    .image{
+        display: none;
+    }
+    .container{
+        display: block;
+        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: 30%;
+    }
+    .info {
+        margin: 0 auto;
+        width: 90%;
+    }
+    h1 {
+        font-size: 27px;
+    }
+    .sub-text{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .price {
+        font-size: 25px;
+    }
+    .slashed-price {
+        float: right;
+        margin-top: -9%;
+    }
+    span {
+        font-size: 15px;
+        top: 5px;
+        left: 110px;
+    }
+    .order {
+        display: block;
+    }
+    .count {
+        justify-content: space-between;
+    }
+    .ca--rt {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+}
