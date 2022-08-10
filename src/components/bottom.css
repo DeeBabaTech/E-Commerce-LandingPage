@@ -6,9 +6,7 @@ body {
     font-family:'Red Hat Display', sans-serif;
 }
 .mge {
-    height: 14vh;
-    width: 6.5vw;
-    margin: 10px;
+    width: 20%;
     border-radius: 5px;
     border-color: orangered;
 }
@@ -21,13 +19,15 @@ body {
     display: none;
 }
 #lightbox-img {
-    max-height: 70vh;
-    max-width: 50vw;
-    /* object-fit: cover; */
+    width: 100%;
     border-radius: 20px;
-    margin-top: 50px;
 }
-  
+.imageBottom {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10px;
+} 
 #lightbox {
     z-index: 1;
     position: fixed;
@@ -37,56 +37,63 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
 }
-.lightboxx {
-    z-index: 1;
-    position: fixed;
-    bottom: 2%;
-    left: 34%;
+.lightboxInfo {
+    position: relative;
+    width: 32%;
 }
-
+.imageBottom2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+} 
 .icon-left {
     position: absolute;
-    left: 32.5%;
-    top: 39%;
+    left: -5%;
+    top: 38%;
     border: white;
     border-radius: 50px;
-    height: 7%;
-    width: 3%;
-    padding-top: 4px; padding-right: 8px;
+    height: 8%;
+    width: 10%;
+    padding-top: 4px; 
+    padding-right: 8px;
 }
 
 .icon-right {
     position: absolute;
-    right: 32.5%;
-    top: 39%;
+    right: -5%;
+    top: 38%;
     border: white;
     border-radius: 50px;
-    height: 7%;
-    width: 3%;
-    padding-top: 4px; padding-left: 8px;
+    height: 8%;
+    width: 10%;
+    padding-top: 4px; 
+    padding-left: 8px;
 }
 .icon-exit {
     position: absolute;
-    right: 33%;
-    top: 2%;
+    right: 0;
+    top: -5%;
     border-radius: 5px;
     border: white;
     padding-top: 3px;
 }
 @media screen and (max-width: 960px) {
-    .mge {
+    .imageBottom {
         display: none;
     }
+   
     .bottom {
         display: block;
+        width: 100%;
+        position: relative;
     }
     .lightbox-img {
-        height: 100%;
         width: 100%;
-        margin-top: -80px;
+        margin-top: -40px;
     }
     .icon-left {
         position: absolute;
@@ -94,8 +101,7 @@ body {
         top: 45%;
         height: 7%;
         width: 8%;
-        padding-top: 4px; 
-        padding-right: 8px;
+        padding: 7px 10px 25px 7px; 
     }
     .icon-right {
         position: absolute;
@@ -103,7 +109,6 @@ body {
         top: 45%;
         height: 7%;
         width: 8%;
-        padding-top: 4px; 
-        padding-left: 8px;
+        padding: 7px 10px 25px 8px; 
     }
 }

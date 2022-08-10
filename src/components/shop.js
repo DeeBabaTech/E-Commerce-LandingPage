@@ -33,7 +33,7 @@ function Shop({count, setCount, calculation, setCalculation, cartItem, setCartIt
     
       return (
         <div className="container">
-          <div>
+          <div className='leftContainer'>
             <img src={product_1} className='image' alt="" />
             <div>
               <Bottom />

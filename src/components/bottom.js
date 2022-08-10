@@ -9,7 +9,7 @@ let images = [product_1, product_2, product_3, product_4]
 
 
 function Bottom() {
-  const [imageToShow, setImageToShow] = useState("");
+  const [imageToShow, setImageToShow] = useState(product_1);
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
 
   const imageBottom = images.map((image, index) => (
@@ -74,27 +74,32 @@ function Bottom() {
 
 
   return (
-    <div className=''>
-      {imageBottom}
+    <>
+      <div className='imageBottom'>{imageBottom}</div>
+
       {
         lightboxDisplay ? 
         <>
-          <div id="lightbox" onClick={hideLightBox} >
-            <button className='icon-left' onClick={showPrev}><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
-            <img id="lightbox-img" src={imageToShow} alt='images' />
-            <button className='icon-right' onClick={showNext}><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
-            <button className='icon-exit' onClick={hideLightBox}><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fillRule="evenodd"/></svg></button>
+          <div id="lightbox">
+            <div className='lightboxInfo'>
+              <button className='icon-exit' onClick={hideLightBox}><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fillRule="evenodd"/></svg></button>
+              <button className='icon-left' onClick={showPrev}><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
+              <img id="lightbox-img" src={imageToShow} alt='images' />
+              <div className='imageBottom2'>{imageBottom}</div>
+              <button className='icon-right' onClick={showNext}><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
+            </div>
           </div>
-          <div className='lightboxx'> {imageBottom} </div>
         </>
        : ""
       }
-        <div className='bottom'>
-          <button className='icon-left' onClick={showPrev2}><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
-          <img className="lightbox-img" src={imageToShow} alt='images' />
-          <button className='icon-right' onClick={showNext2}><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
-        </div>
-    </div>
+        
+      <div className='bottom'>
+        <button className='icon-left' onClick={showPrev2}><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
+        <img className="lightbox-img" src={imageToShow} alt='images' />
+        <button className='icon-right' onClick={showNext2}><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></button>
+      </div>
+
+    </>
   )
 }
 

@@ -38,20 +38,20 @@ a {
 
 .avatar {
     position: absolute;
-    bottom: 20px;
+    bottom: 20%;
     height: 50px;
     width: 50px;
-    right: 20px;
+    right: 2%;
 }
 .cart {
     position: absolute;
-    bottom: 55%;
+    bottom: 40%;
     right: 120px;
 }
 .cart-count {
     position: absolute;
     right: 115px;
-    bottom: 72%;
+    bottom: 60%;
     background-color: orangered;
     color: whitesmoke;
     font-size: 10px;
@@ -68,6 +68,7 @@ a {
         margin: 0;
         padding-bottom: 20px;
         background-color: white;
+        z-index: 1;
     }
     .option {
         display: block;
@@ -129,5 +130,8 @@ a {
         border-radius: 5px;
         width: 12px;
         text-align: center;
+    }
+    .hr-1 {
+        display: none;
     }
 }
