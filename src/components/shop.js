@@ -18,6 +18,7 @@ function Shop({count, setCount, calculation, setCalculation, cartItem, setCartIt
     }
   
     const populateCart = () => {
+      alert('Added to Cart')
      setCartItem([...cartItem, {
            name: product.name,
            amount: product.amount,
